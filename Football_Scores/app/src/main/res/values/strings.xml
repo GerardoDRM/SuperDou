@@ -45,5 +45,17 @@
     <string name="empty_data">Not data available</string>
     <string name="vs">VS</string>
     <string name="widget_score">Score: <xliff:g id="Home">%1$s</xliff:g> </string>
+    <string name="share">Share button</string>
+    <string name="unknow_league">Not known League Please report</string>
+    <string name="arsenal">Arsenal London FC</string>
+    <string name="manchester">Manchester United FC</string>
+    <string name="swansea">Swansea City</string>
+    <string name="leicester">Leicester City</string>
+    <string name="everton">Everton FC</string>
+    <string name="west_ham">West Ham United FC</string>
+    <string name="tottenham">Tottenham Hotspur FC</string>
+    <string name="west_bromwich">West Bromwich Albion</string>
+    <string name="sudenrland">Sunderland AFC</string>
+    <string name="stoke_city">Stoke City FC</string>
 
 </resources>

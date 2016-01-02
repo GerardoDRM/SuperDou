@@ -81,8 +81,8 @@ public class TodayWidgetService extends IntentService {
             RemoteViews views = new RemoteViews(getPackageName(), R.layout.today_widget_match);
 
             // Add the data to the RemoteViews
-            views.setImageViewResource(R.id.appwidget_home_img, Utilies.getTeamCrestByTeamName(matchHome));
-            views.setImageViewResource(R.id.appwidget_away_img, Utilies.getTeamCrestByTeamName(matchAway));
+            views.setImageViewResource(R.id.appwidget_home_img, Utilies.getTeamCrestByTeamName(matchHome, this));
+            views.setImageViewResource(R.id.appwidget_away_img, Utilies.getTeamCrestByTeamName(matchAway, this));
             views.setTextViewText(R.id.appwidget_time, matchTime);
             views.setTextViewText(R.id.appwidget_score, getString(R.string.widget_score,
                     Utilies.getScores(Integer.parseInt(goalsHome), Integer.parseInt(goalsAway))));

@@ -59,9 +59,9 @@ public class scoresAdapter extends CursorAdapter
         mHolder.match_id = cursor.getDouble(COL_ID);
         // On image with text description in the same UI, we don't require setContentDescription
         mHolder.home_crest.setImageResource(Utilies.getTeamCrestByTeamName(
-                cursor.getString(COL_HOME)));
+                cursor.getString(COL_HOME), mContext));
         mHolder.away_crest.setImageResource(Utilies.getTeamCrestByTeamName(
-                cursor.getString(COL_AWAY)
+                cursor.getString(COL_AWAY),mContext
         ));
         //Log.v(FetchScoreTask.LOG_TAG,mHolder.home_name.getText() + " Vs. " + mHolder.away_name.getText() +" id " + String.valueOf(mHolder.match_id));
         //Log.v(FetchScoreTask.LOG_TAG,String.valueOf(detail_match_id));
@@ -77,9 +77,9 @@ public class scoresAdapter extends CursorAdapter
                     , ViewGroup.LayoutParams.MATCH_PARENT));
             TextView match_day = (TextView) v.findViewById(R.id.matchday_textview);
             match_day.setText(Utilies.getMatchDay(cursor.getInt(COL_MATCHDAY),
-                    cursor.getInt(COL_LEAGUE)));
+                    cursor.getInt(COL_LEAGUE), mContext));
             TextView league = (TextView) v.findViewById(R.id.league_textview);
-            league.setText(Utilies.getLeague(cursor.getInt(COL_LEAGUE)));
+            league.setText(Utilies.getLeague(cursor.getInt(COL_LEAGUE), mContext));
             league.setContentDescription(context.getString(R.string.league_name, cursor.getInt(COL_LEAGUE)));
 
             Button share_button = (Button) v.findViewById(R.id.share_button);

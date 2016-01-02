@@ -1,10 +1,8 @@
 package it.jaschke.alexandria.utils;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.preference.PreferenceManager;
 
 /**
  * Created by gerardo on 28/12/15.
@@ -24,6 +22,15 @@ public class Utility {
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         return activeNetwork != null &&
                 activeNetwork.isConnectedOrConnecting();
+    }
+
+
+    static public String checkNull(String data) {
+        if(data != null)
+            return data;
+        else
+            return "";
+
     }
 
 }

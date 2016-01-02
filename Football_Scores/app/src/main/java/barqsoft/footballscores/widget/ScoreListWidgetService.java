@@ -90,8 +90,8 @@ public class ScoreListWidgetService extends RemoteViewsService {
 
 
                 // Add the data to the RemoteViews
-                views.setImageViewResource(R.id.appwidget_list_home_img, Utilies.getTeamCrestByTeamName(matchHome));
-                views.setImageViewResource(R.id.appwidget_list_away_img, Utilies.getTeamCrestByTeamName(matchAway));
+                views.setImageViewResource(R.id.appwidget_list_home_img, Utilies.getTeamCrestByTeamName(matchHome, getApplicationContext()));
+                views.setImageViewResource(R.id.appwidget_list_away_img, Utilies.getTeamCrestByTeamName(matchAway, getApplicationContext()));
                 views.setTextViewText(R.id.appwidget_list_score, Utilies.getScores(Integer.parseInt(goalsHome), Integer.parseInt(goalsAway)));
                 views.setContentDescription(R.id.appwidget_list_score, getString(R.string.scores, Integer.parseInt(goalsHome), Integer.parseInt(goalsAway)));
                 views.setTextViewText(R.id.appwidget_list_home_name, matchHome);

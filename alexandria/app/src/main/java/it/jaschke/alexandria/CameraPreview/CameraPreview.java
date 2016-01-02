@@ -26,8 +26,7 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 
 /**
- * Camera preview using barcode implementation from
- * mobile vision api samples https://github.com/googlesamples/android-vision
+ * A basic Camera preview class
  */
 public class CameraPreview extends ViewGroup {
     private static final String TAG = "CameraSourcePreview";

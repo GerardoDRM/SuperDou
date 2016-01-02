@@ -25,8 +25,8 @@ import com.google.android.gms.vision.barcode.Barcode;
 import it.jaschke.alexandria.CameraPreview.GraphicOverlay;
 
 /**
- * Camera preview using barcode implementation from
- * mobile vision api samples https://github.com/googlesamples/android-vision
+ * Graphic instance for rendering barcode position, size, and ID within an associated graphic
+ * overlay view.
  */
 public class BarcodeGraphic extends GraphicOverlay.Graphic {
 

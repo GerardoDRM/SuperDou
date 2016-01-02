@@ -1,30 +1,18 @@
 package it.jaschke.alexandria;
 
-import android.Manifest;
 import android.app.Dialog;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.hardware.Camera;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.util.SparseArray;
 import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.vision.CameraSource;
-import com.google.android.gms.vision.Frame;
 import com.google.android.gms.vision.MultiProcessor;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
@@ -60,8 +48,6 @@ public class CameraActivity extends AppCompatActivity {
                 if (graphic != null) {
                     barcode = graphic.getBarcode();
                     if (barcode != null) {
-                        TextView textView = (TextView) findViewById(R.id.bar_code);
-                        textView.setText(barcode.rawValue);
                         Intent data = new Intent();
                         data.putExtra("Barcode", barcode.rawValue);
                         setResult(CommonStatusCodes.SUCCESS, data);

@@ -22,8 +22,8 @@ import com.google.android.gms.vision.barcode.Barcode;
 import it.jaschke.alexandria.CameraPreview.GraphicOverlay;
 
 /**
- * Camera preview using barcode implementation from
- * mobile vision api samples https://github.com/googlesamples/android-vision
+ * Factory for creating a tracker and associated graphic to be associated with a new barcode.  The
+ * multi-processor uses this factory to create barcode trackers as needed -- one for each barcode.
  */
 public class BarcodeTrackerFactory implements MultiProcessor.Factory<Barcode> {
     private GraphicOverlay<BarcodeGraphic> mGraphicOverlay;
@@ -39,3 +39,4 @@ public class BarcodeTrackerFactory implements MultiProcessor.Factory<Barcode> {
     }
 
 }
+

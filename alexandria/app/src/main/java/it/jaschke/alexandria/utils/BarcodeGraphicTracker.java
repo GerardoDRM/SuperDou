@@ -22,8 +22,10 @@ import com.google.android.gms.vision.barcode.Barcode;
 import it.jaschke.alexandria.CameraPreview.GraphicOverlay;
 
 /**
- * Camera preview using barcode implementation from
- * mobile vision api samples https://github.com/googlesamples/android-vision
+ * Generic tracker which is used for tracking or reading a barcode (and can really be used for
+ * any type of item).  This is used to receive newly detected items, add a graphical representation
+ * to an overlay, update the graphics as the item changes, and remove the graphics when the item
+ * goes away.
  */
 class BarcodeGraphicTracker extends Tracker<Barcode> {
     private GraphicOverlay<BarcodeGraphic> mOverlay;
